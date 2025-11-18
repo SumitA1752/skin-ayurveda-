@@ -1,0 +1,133 @@
+/* Chatbot Widget Styles */
+.skinayurveda-chatbot {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9999;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.skinayurveda-chatbot__button {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(46,125,50,0.15);
+  padding: 0.75em 1.5em;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.skinayurveda-chatbot__button:hover {
+  background: #388e3c;
+}
+.skinayurveda-chatbot__window {
+  width: 320px;
+  max-width: 95vw;
+  height: 420px;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(46,125,50,0.18);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: chatbot-fade-in 0.3s;
+}
+@keyframes chatbot-fade-in {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.skinayurveda-chatbot__header {
+  background: linear-gradient(90deg, #2e7d32 60%, #81c784 100%);
+  color: #fff;
+  padding: 1em;
+  font-weight: 600;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.skinayurveda-chatbot__close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.skinayurveda-chatbot__body {
+  flex: 1;
+  padding: 1em;
+  overflow-y: auto;
+  background: #f7faf7;
+}
+.skinayurveda-chatbot__footer {
+  padding: 0.75em 1em;
+  background: #e8f5e9;
+  display: flex;
+  gap: 0.5em;
+}
+.skinayurveda-chatbot__input {
+  flex: 1;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  padding: 0.5em;
+  font-size: 1em;
+}
+.skinayurveda-chatbot__send {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.skinayurveda-chatbot__send:hover {
+  background: #388e3c;
+}
+.skinayurveda-chatbot__msg {
+  margin-bottom: 0.75em;
+  display: flex;
+  flex-direction: column;
+}
+.skinayurveda-chatbot__msg--user {
+  align-items: flex-end;
+}
+.skinayurveda-chatbot__msg--bot {
+  align-items: flex-start;
+}
+.skinayurveda-chatbot__bubble {
+  max-width: 80%;
+  padding: 0.7em 1em;
+  border-radius: 14px;
+  font-size: 0.98em;
+  line-height: 1.5;
+  margin-bottom: 2px;
+}
+.skinayurveda-chatbot__bubble--user {
+  background: #c8e6c9;
+  color: #2e7d32;
+  border-bottom-right-radius: 2px;
+}
+.skinayurveda-chatbot__bubble--bot {
+  background: #fff;
+  color: #333;
+  border-bottom-left-radius: 2px;
+  border: 1px solid #e0e0e0;
+}
+@media (max-width: 600px) {
+  .skinayurveda-chatbot__window {
+    width: 98vw;
+    height: 70vh;
+    min-width: 0;
+    border-radius: 10px;
+  }
+  .skinayurveda-chatbot {
+    left: 8px;
+    bottom: 8px;
+  }
+}
